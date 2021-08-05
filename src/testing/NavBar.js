@@ -1,7 +1,7 @@
 import React from 'react'
 import Sidebar from '../testing/SideBar';
 
-import CustomInput from './Component/CustomInput';
+//import CustomInput from './Component/CustomInput';
 import CustomProfileDropdown from './Component/CustomProfileDropdown';
 
 
@@ -19,31 +19,33 @@ function TopBar() {
                    
                   <span className="block text-2xl sm:text-2xl p-3">
                   
-                    <a className="ml-0 text-black  flex items-start justify-start  hover:text-black px-3 py-2 rounded-md text-sm font-medium"> 
-                          <span className="text-sm "><b className="text-2xl border-l-2">WelCome To</b> School Name</span>
+                  
+                    <a className="ml-0 text-black  flex items-start justify-start  hover:text-black px-3 py-2 rounded-md text-sm font-medium">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-stack" width={25} height={25} viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" fill="none" strokeLinecap="round" strokeLinejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" />
+                                    <polyline points="12 4 4 8 12 12 20 8 12 4" />
+                                    <polyline points="4 12 12 16 20 12" />
+                                    <polyline points="4 16 12 20 20 16" />
+                                </svg>
+                          <span className="text-sm "><b className=""></b> School Name</span>
                           
-                          <select class="w-40 border mx-8 bg-white rounded px-3 py-2 outline-none text-yellow-500">
-                            <option class="py-1 ">ADMINISTRATION</option>
-                            <option class="py-1">Students</option>
-                            <option class="py-1">Teachers</option>
-                            <option class="py-1">Parents</option>
-                         </select> 
+                          
                             
                               
-                         <CustomInput />
-                         <div>
+                         {/*<CustomInput />*/}
+                         {/*<div>
                                 
                                 <img src="icon.png" className=" h-10 w-10  rounded-full border-2" alt=""/>
                
-                             </div>
+                         </div>*/}
                
-                       <div>
+                       <div className="ml-3 relative">
                
-                        <img src="bell icon.png" className=" h-10 w-10  rounded-full border-2" alt=""/>
+                        <img src="bell icon.png" className="  h-10 w-10  rounded-full border-2" alt=""/>
                        </div>
-                         <div>
+                         {/*<div>
                               <img src="icon email.png" className=" h-10 w-10 rounded-full border-2" alt=""/>
-                         </div>
+                         </div>*/}
                               
 
                                
