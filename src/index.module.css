@@ -1,0 +1,142 @@
+* {
+  margin: 1%;
+  padding: 1%;
+  box-sizing: border-box;
+}
+/* container */
+.container {
+  display: flex;
+  height: 800px;
+  width: 900px;
+  border: 1px;
+  border-color: grey;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgb(245, 245, 245);
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  align-items: center;
+  background-color: whitesmoke;
+}
+.h1 {
+  font-size: xx-large;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+
+  padding: 40px;
+  width: 110.5pt;
+  height: 15.5pt;
+  margin-left: 40px;
+  color: rgb(94, 89, 89);
+}
+.h2 {
+  color: rgb(193, 191, 191);
+}
+.box {
+  padding: 12px;
+  width: 310pt;
+  height: 44pt;
+  margin: 15px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  display: flexbox;
+}
+#submit {
+  padding: 12px 30px;
+  width: 40%;
+  margin-top: 40px;
+  background-color: darkorange;
+  color: white;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+#submit:hover {
+  cursor: pointer;
+  background-color: darkorange;
+}
+.side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400%;
+  height: 70%;
+}
+.side.img {
+  display: flex;
+  /*width: 360pt;
+    height: 512pt;
+    margin: 2px;*/
+}
+.Icon.img {
+  width: 0pt;
+  height: 0pt;
+  color: rgb(193, 193, 193);
+}
+.Icon1.img {
+  width: 15.8pt;
+  height: 18pt;
+}
+ .box2 {
+  padding: 12px;
+  width: 310pt;
+  height: 44pt;
+  margin: 15px;
+  border: 1px solid gray;
+  outline: none;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  display: flexbox;
+}
+.box3 {
+  padding: 12px;
+  width: 310pt;
+  height: 44pt;
+  margin: 15px;
+  border: 1px rgb(242, 171, 47);
+  outline: none;
+  border-radius: 20px;
+  background-color: rgb(242, 171, 47);
+  display: flexbox;
+}
+.sign1 {
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-style: initial;
+}
+.img sch{
+ width: 20%;;
+  height: auto;
+}
+.icon {
+  padding: 10px;
+  color:#FFFFFF;
+  min-width: 50px;
+  text-align: center;
+}
+.inputs{
+  width:100%;
+  padding: 20px 40px;
+}
+.icons{
+  position: relative;
+  top: -60px;
+  right: 20px;
+}
+.button{
+  
+  color: white;
+  padding: 12px;
+  width: 310pt;
+  height: 44pt;
+  margin: 15px;
+  border: 1px rgb(242, 171, 47);
+  outline: none;
+  border-radius: 20px;
+  background-color: rgb(242, 171, 47);
+}
