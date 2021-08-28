@@ -1,33 +1,23 @@
-import React from 'react';
+import React from "react";
 import style from "./index.module.css";
 import { useState } from "react";
-import axios from 'axios';
+import axios from "axios";
 
-const SignUp = () => {
+const Login = () => {
 
-  const [firstName,setFirstName] = useState('');
-  const [lastName,setLastName] = useState('');
-  const [userName,setUserName] = useState('');
-  const [email,setEmail] = useState('');
-  const [password,setPassword] = useState('');
-    
-    const Handlersubmit = () => {
-
-        alert("record sucessfull submit");
-      console.log(firstName);
-      console.log(lastName);
+  const [userName,setUserName]=useState("");
+  const [password,setPassword]=useState("");
+     
+    const Handlersubmit =() => {
+      alert("login successfuly");
       console.log(userName);
-      console.log(email);
       console.log(password);
-    
 
 
-      axios.post('http://localhost:3005/api/user/signup', {
+      axios.post('http://localhost:3001/api/user/Login', {
        
-        firstName: firstName,
-        lastName: lastName,
+        
         userName:userName,
-        email: email,
         password:password,
       })
       .then(function (response) {
@@ -37,31 +27,26 @@ const SignUp = () => {
         console.log(error);
       });
     }
+    
 
 
-    return (
-        <div className={style["container"]}>
-            <form action="" className="form">
-            <div>
-            <img className={style["img sch"]} src="s1.png" alt="" />
+  return (
+    <div className={style["container"]}>
+      <form action="" className="form">
+        <h1 className={style["h1"]}>WELLCOME </h1>
+        <div>
+          <img className={style["img sch"]} src="s1.png" alt="" />
+        </div>
+        <h2 className={style["h2"]}>
+          Login to get in the moment updates on the things that intrest you
+        </h2>
 
-            <h1 className={style['h1']}>SIGN UP</h1>
-             </div>
-             <div>
-            
-              <input className={style["inputs"]} type="text" name="FirstName" value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder="First Name" />
-              <img className={style["icons"]} src="Icon awesome-user-alt.png" alt="" width="13%" />
-              </div><div>
-              
-              <input className={style["inputs"]} type="text" name="LastName" value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder="Last Name" />
-              <img className={style["icons"]} src="Icon awesome-user-alt.png" alt="" width="13%" />
-              
+        <div>
           <input
             className={style["inputs"]}
             type="text"
-            name="userName"
-            value={userName}
-            onChange={(e)=>setUserName(e.target.value)}
+            name="username"
+            value={userName} onChange={(e)=>setUserName(e.target.value)}
             placeholder="UserName"
           />
           <img
@@ -70,37 +55,56 @@ const SignUp = () => {
             alt=""
             width="13%"
           />
-              <input
+        </div>
+        {/*<div className={style["box2"]}>
+          <img
+            className={style["Icon1.img"]}
+            src="Icon awesome-lock.png"
+            alt=""
+            width="13%"
+          />
+          {/*<input type="password" name="password" className="box" placeholder="Password"/>
+        </div>
+        <div>
+          <img className={style["icons"]} src="Icon awesome-lock.png" alt=""/>
+          <input  class="input-field" type="password" name="password" placeholder="Password"/>
+
+  </div>*/}
+        <div>
+          <input
             className={style["inputs"]}
             type="text"
-            name="email"
-            value={email}
-            onChange={(e)=>setEmail(e.target.value)}
-            placeholder="Email"
+            name="password"
+            value={password} onChange={(e)=>setPassword(e.target.value)}
+            placeholder="password"
           />
           <img
             className={style["icons"]}
-            src="Icon material-email.png"
+            src="Icon awesome-lock.png"
             alt=""
-            width="40px"
+            width="13%"
           />
-          <input className={style["inputs"]} type="password" name="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="Password" />
-              <img className={style["icons"]} src="Icon awesome-lock.png" alt="" width="13%" />
         </div>
-           {/*<div className={style['box3']}>
-        <button className={style['sign1']}>SIGN UP</button>
-    </div>*/}
+        <div>
+          <input type="checkbox" value="lsRememberMe" id="rememberMe" />
+          <label for="rememberMe">Remember me</label>
+
+          <label for="Forgot Password">Forgot Password</label>
+        </div>
+        <br></br>
+         {/*<div className={style["box3"]}>
+          <h2 className={style["sign1"]}>SIGN IN</h2>
+          <input type="Sign In"  name="sign in" className="box" placeholder="SIGN IN"/>
+        </div>*/}
         <div className="container">
           <button onClick= {Handlersubmit} className={style['button']}>SIGN UP</button>
         </div>
-        </form>
-        <div className={style["side"]}>
-        <img src="Mask Group 1.png" alt="" width="600px" />
+      </form>
+      <div className={style["side"]}>
+        <img src="Mask Group 1.png" alt="" />
       </div>
+    </div>
+  );
+};
 
-        </div>    
-    )
-}
-
-
-export default SignUp
+export default Login;
